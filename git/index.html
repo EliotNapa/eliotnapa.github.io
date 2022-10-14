@@ -17,69 +17,122 @@
         <div>
             <h2 class="display-4 mt-5" style="line-height:1.5rem;text-align:left;height:3rem;">[2022/10/15 インターネット研究会用資料]</h2>
         </div>
-        <div class="m-5">
-            <div class="ps-3 mb-5">
-                <div class="fw-bold">
-                    <div class="display-6" style="line-height:1.5rem;text-align:left;height:3rem;">AIで利用する数学の分野とPythonのフレームワーク</div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="m-5">
+                        <div class="ps-3 mb-5">
+                            <div class="fw-bold">
+                                <div class="display-6" style="line-height:1.5rem;text-align:left;height:3rem;">AIで利用する数学の分野とPythonのフレームワーク</div>
+                            </div>
+
+                            <div class="ms-4">
+                                <A target="_blank" HREF="https://japan-medical-ai.github.io/medical-ai-course-materials/notebooks/01_Basic_Math_for_ML.html">機械学習に必要な数学の基礎</A>
+                            </div>
+                            <div class="ms-4">
+                                <A target="_blank" HREF="https://youtu.be/7A05OamqCyc">中学数学から始めるAI(Youtube)</A>
+                            </div>
+                            <div class="ms-4">
+                                <A target="_blank" HREF="https://www.tdi.co.jp/miso/tensorflow-keras-pytorch">TensorflowとKeras、PyTorchの比較</A>
+                            </div>
+                            <div class="ms-4">
+                                <A target="_blank" HREF="https://github.com/bes-dev/stable_diffusion.openvino">https://github.com/bes-dev/stable_diffusion.openvino</A> stable diffusionのIntel向けリポジトリ
+                            </div>
+                            <div class="ms-4">
+                                <div>stable_diffusion.openvinoの使い方</div>
+                                <OL>
+                                    <LI>
+                                        Python 3.8以上をインストールする(インストールしていない場合)。
+                                        <BR/> Windows10以上の場合Microsoftストアからインストールするのがおすすめです。
+                                    </LI>
+                                    <LI>
+                                        githubの当該リポジトリのREADME.mdを読んでインストー手順を実行する。
+                                        <BR/> 具体的にはコマンドプロンプトで次のコマンドを実行するだけ。
+                                        <BR/>
+                                        <BR/>
+                                        <div class="fw-bold">pip install -r requirements.txt</div>
+                                        <BR/> 実行時になにか警告が表示された場合それに従う。
+                                    </LI>
+                                    <LI>
+                                        コマンドプロンプトで実行してみる。
+                                        <BR/>
+                                        <BR/>
+                                        <div class="fw-bold">python demo.py --prompt "Photo of flower"</div>
+                                        <BR/> これで数分待つとoutput.pngに花の写真が出力されるはずです。
+                                        <BR/>
+                                        <div class="text-danger">
+                                            ※注意 Windowsではモデルをキャッシュフォルダにダウンロードするため、初回実行は管理者権限のコマンドプロンプトで実行する必要があります。一度ダウンロードした後は通常の権限のコマンドプロンプトで実行できます。
+                                        </div>
+                                        <div>
+                                            ちなみに雑に描いた左の元画像を用意し、次のコマンドを実行すると、左の画像が出力されます。
+                                            <BR/>
+                                            <div class="fw-bold">python demo.py --init-image flower.png --prompt "Photo of flower"</div>
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <img src="img/flower.png" class="img-fluid" alt="元画像">元画像
+                                                    </div>
+                                                    <div class="col ">
+                                                        <img src="img/flower1.5.png" class="img-fluid" alt="出力画像">出力画像
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </LI>
+                                </OL>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="ms-4">
-                    <A target="_blank" HREF="https://japan-medical-ai.github.io/medical-ai-course-materials/notebooks/01_Basic_Math_for_ML.html">機械学習に必要な数学の基礎</A>
+                <div class="row">
+                    <div class="col">
+                        <div class="ps-3">
+                            <div class="display-6" style="line-height:1.5rem;text-align:left;height:3rem;">github初期設定</div>
+
+                            <div class="fw-bold">
+                                <P>[設定すべき内容]</P>
+                            </div>
+                            <OL>
+                                <LI>
+                                    <div>Visual Studio Codeのインストール</div>
+                                    <A target="_blank" HREF="https://code.visualstudio.com/">Visual Studio Codeダウンロードサイト</A>
+                                    <div>chorome bookに開発ツールをセッティングする</div>
+                                    <A target="_blank" HREF="https://qiita.com/amemolee/items/5a9dd718a1166544f0cc">Chromebook に開発ツール（Android Studio、Eclipse、Visual Studio Code、Github Desktop）をセッティングする</A>
+                                </LI>
+
+                                <LI>
+                                    <div>gitのインストール</div>
+                                    <A target="_blank" HREF="https://gitforwindows.org/">Gitダウンロードサイト(Windows)</A>
+                                    <div>※Mac OSでは標準搭載されている</div>
+                                    <A target="_blank" HREF="https://qiita.com/libra219/items/e49f9cc833ad9bb5d1ca">Gitのインストール手順</A>
+                                </LI>
+
+                                <LI>
+                                    <div>GitHubアカウントの作成</div>
+                                    <A target="_blank" HREF="https://qiita.com/ayatokura/items/9eabb7ae20752e6dc79d">GitHubアカウントの作成方法 (2021年版)</A>
+                                </LI>
+
+                                <LI>
+                                    <div>GitHubアカウントnoreplyメールの設定(SPAM対策)</div>
+                                    <A target="_blank" HREF="https://qiita.com/Suzuki09/items/e0a7a2628e30b1b8363b">GitHubのメアドをnoreplyに設定する</A>
+                                </LI>
+
+                                <LI>
+                                    <div>gitコマンドからアクセスするためのPersonal access tokensの設定</div>
+                                    <A target="_blank" HREF="https://qiita.com/kz800/items/497ec70bff3e555dacd0">GitHub「Personal access tokens」の設定方法</A>
+                                    <div class="text-danger">※トークンは作成時しか表示されないので必ず保存すること！</div>
+                                </LI>
+
+                                <LI>
+                                    <div>GitHub Desktopの使い方</div>
+                                    <A target="_blank" HREF="https://qiita.com/makaishi2/items/ab967951436a5c28b539">Githubでデータ共有　その３　Github Desktop編</A>
+                                </LI>
+
+                            </OL>
+                        </div>
+                    </div>
                 </div>
-                <div class="ms-4">
-                    <A target="_blank" HREF="https://youtu.be/7A05OamqCyc">中学数学から始めるAI(Youtube)</A>
-                </div>
-                <div class="ms-4">
-                    <A target="_blank" HREF="https://www.tdi.co.jp/miso/tensorflow-keras-pytorch">TensorflowとKeras、PyTorchの比較</A>
-                </div>
-                <div class="ms-4">
-                    <A target="_blank" HREF="https://github.com/bes-dev/stable_diffusion.openvino">https://github.com/bes-dev/stable_diffusion.openvino</A> stable diffusionのIntel向けリポジトリ
-                </div>
-            </div>
-
-            <div class="ps-3">
-                <div class="display-6" style="line-height:1.5rem;text-align:left;height:3rem;">github初期設定</div>
-
-                <div class="fw-bold">
-                    <P>[設定すべき内容]</P>
-                </div>
-                <OL>
-                    <LI>
-                        <div>Visual Studio Codeのインストール</div>
-                        <A target="_blank" HREF="https://code.visualstudio.com/">Visual Studio Codeダウンロードサイト</A>
-                        <div>chorome bookに開発ツールをセッティングする</div>
-                        <A target="_blank" HREF="https://qiita.com/amemolee/items/5a9dd718a1166544f0cc">Chromebook に開発ツール（Android Studio、Eclipse、Visual Studio Code、Github Desktop）をセッティングする</A>
-                    </LI>
-
-                    <LI>
-                        <div>gitのインストール</div>
-                        <A target="_blank" HREF="https://gitforwindows.org/">Gitダウンロードサイト(Windows)</A>
-                        <div>※Mac OSでは標準搭載されている</div>
-                        <A target="_blank" HREF="https://qiita.com/libra219/items/e49f9cc833ad9bb5d1ca">Gitのインストール手順</A>
-                    </LI>
-
-                    <LI>
-                        <div>GitHubアカウントの作成</div>
-                        <A target="_blank" HREF="https://qiita.com/ayatokura/items/9eabb7ae20752e6dc79d">GitHubアカウントの作成方法 (2021年版)</A>
-                    </LI>
-
-                    <LI>
-                        <div>GitHubアカウントnoreplyメールの設定(SPAM対策)</div>
-                        <A target="_blank" HREF="https://qiita.com/Suzuki09/items/e0a7a2628e30b1b8363b">GitHubのメアドをnoreplyに設定する</A>
-                    </LI>
-
-                    <LI>
-                        <div>gitコマンドからアクセスするためのPersonal access tokensの設定</div>
-                        <A target="_blank" HREF="https://qiita.com/kz800/items/497ec70bff3e555dacd0">GitHub「Personal access tokens」の設定方法</A>
-                        <div class="text-danger">※トークンは作成時しか表示されないので必ず保存すること！</div>
-                    </LI>
-
-                    <LI>
-                        <div>GitHub Desktopの使い方</div>
-                        <A target="_blank" HREF="https://qiita.com/makaishi2/items/ab967951436a5c28b539">Githubでデータ共有　その３　Github Desktop編</A>
-                    </LI>
-
-                </OL>
             </div>
         </div>
     </body>
