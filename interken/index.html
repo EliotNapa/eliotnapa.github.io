@@ -19,21 +19,114 @@
 
             <div>
                 <div>
-                    過去の回の情報
+                    <h3 class="display-4 mt-5" style="line-height:1.5rem;text-align:left;height:2rem;">過去の回の情報</h2>
                 </div>
                 <OL>
                     <LI>
                         <div>AI資料とgithub初期設定</div>
                         <A HREF="git_index.html">
-                            機械学習(AI)による白黒写真のカラーリング</A>
+                            github初期設定の設定はこちら</A>
                     </LI>
                     <LI>
                         <div>機械学習(AI)による白黒写真のカラーリング</div>
                         <A HREF="ai_coloring.html">
-                            機械学習(AI)による白黒写真のカラーリング</A>
+                            白黒写真のAI着色</A>
                     </LI>
                 </OL>
+                <h2 class="display-4 mt-5" style="line-height:1.5rem;text-align:left;height:3rem;">[2022/12/17 インターネット研究会用資料]</h2>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="m-5">
+                                <div class="ps-3 mb-5">
+                                    <div class="fw-bold">
+                                        <div class="display-6" style="line-height:1.5rem;text-align:left;height:3rem;">最新のAI画像生成技術Stable diffuision</div>
+                                    </div>
+
+                                    <div class="ms-4" style="line-height:1.5rem;text-align:left;height:3rem;">
+                                        <A target="_blank" HREF="https://youtu.be/DDGgKt_CyRQ">【AI論文解説】物理学の知識を背景とした画像生成手法 Part1</A>
+                                    </div>
+                                    <div class="ms-4">
+                                        <h3>GPUのない人向きstable_diffusion.openvinoの使い方(下にGPUのある人向けの操作もあります)</h3>
+                                        <OL>
+                                            <LI class="my-3">
+                                                Python 3.8か3.9インストールする(インストールしていない場合)。
+                                                <BR/> Windows10以上の場合Microsoftストアからインストールするのがおすすめです。
+                                            </LI>
+                                            <LI class="my-3">
+                                                <A target="_blank" HREF="https://github.com/bes-dev/stable_diffusion.openvino">https://github.com/bes-dev/stable_diffusion.openvino<A>
+                                                    githubの上のリポジトリのREADME.mdを読んでインストール手順を実行する。
+                                                <BR/> 具体的にはリポジトリをcloneしたあとコマンドプロンプトで次のコマンドを実行するだけ。
+                                                <BR/>
+                                                <BR/>
+                                                <div class="fw-bold">pip install -r requirements.txt</div>
+                                                <BR/> 実行時になにか警告が表示された場合それに従う。
+                                            </LI>
+                                            <LI class="my-3">
+                                                コマンドプロンプトで実行してみる。
+                                                <BR/>
+                                                <BR/>
+                                                <div class="fw-bold">python demo.py --prompt "Photo of flower"</div>
+                                                <BR/> これで数分待つとoutput.pngに花の写真が出力されるはずです。
+                                                <BR/> 標準で32stepsかかります。
+                                                <BR/>
+                                                <div class="text-danger">
+                                                    ※注意 Windowsではモデルをキャッシュフォルダにダウンロードするため、初回実行は管理者権限のコマンドプロンプトで実行する必要があります。一度ダウンロードした後は通常の権限のコマンドプロンプトで実行できます。
+                                                </div>
+                                                <div>
+                                                    ちなみに雑に描いた左の元画像を用意し、次のコマンドを実行すると、左の画像が出力されます。
+                                                    <BR/>
+                                                    <div class="fw-bold">python demo.py --init-image flower.png --prompt "Photo of flower"</div>
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <img src="img/flower.png" class="img-fluid" alt="元画像">元画像
+                                                            </div>
+                                                            <div class="col ">
+                                                                <img src="img/flower1.5.png" class="img-fluid" alt="出力画像">出力画像
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </LI>
+                                        </OL>
+                                    </div>
+                                    <div class="ms-4">
+                                        <h3>nVidia GPUのある人向き AUTOMATIC1111版stable-diffusion-webui の使い方</h3>
+                                        <OL>
+                                            <LI class="my-3">
+                                                Python 3.10をインストールする(インストールしていない場合)。
+                                                <BR/> Windows10以上の場合Microsoftストアからインストールするのがおすすめです。
+                                                <BR/> openvinoとは共存が難しいので、どちらかのみをインストールすることになります。
+                                            </LI>
+                                            <LI class="my-3">
+                                                <A target="_blank" HREF="https://github.com/AUTOMATIC1111/stable-diffusion-webui">https://github.com/AUTOMATIC1111/stable-diffusion-webui<A>
+                                                    githubの上のリポジトリのREADME.mdを読んでInstallation and Runningびインストール手順を実行する。
+                                                <BR/> 具体的にはリポジトリをcloneしたあと次の内容を実行するだけ。
+                                                <BR/>
+                                                <BR/>
+                                                <div class="fw-bold">学習モデルmodel.ckptを/models/Stable-Diffusionへのコピー</div>
+                                                <div class="fw-bold">GFPGANv1.4.pthをwebui.pyと同じディレクトリへのコピー</div>
+                                                <BR/>サイズが大きいためインターネット研究会当日はmodelと.pthファイルは宮崎が持参する予定です。
+                                            </LI>
+                                            <LI class="my-3">
+                                                コマンドプロンプトで実行してみる。
+                                                <BR/>
+                                                <BR/>
+                                                <div class="fw-bold">webui-user.bat"</div>
+                                                <BR/> しばらく待つとコマンドプロンプトに、待受URLが表示されるので、ブラウザでそのURLを開いてみる。
+                                                <BR/>設定を変更しないと<A target="_blank" HREF="http://127.0.0.7:7861">http://127.0.0.7:7861</A>になります。
+                                                <BR/>
+                                            </LI>
+                                        </OL>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
     </body>
 
 </html>
