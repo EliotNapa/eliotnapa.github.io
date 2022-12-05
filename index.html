@@ -1,31 +1,35 @@
 <!-- index.html -->
 <html>
+
 <head>
-  <!-- manifest.jsonÇåƒÇ—èoÇµÇƒÇ¢Ç‹Ç∑ -->
-  <link rel="manifest" href="./manifest.json">
-  <script>
-    // service workerÇ™óLå¯Ç»ÇÁÅAservice-worker.js Çìoò^ÇµÇ‹Ç∑
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./service-worker.js').then(function() { console.log('Service Worker Registered'); });
-   }
-  </script>
-  <title>Hello PWA.</title>
-  <style>
-    body {
-      text-align:center;
-      font-size: 40px;
-      vertical-align: middle;
-    }
-    .image {
-      width: 80%; 
-      margin: auto;
-      display: block;
-    }
-  </style>
+    <link rel="manifest" href="./manifest.json">
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./service-worker.js').then(function() {
+                console.log('Service Worker Registered');
+            });
+        }
+    </script>
+    <title>Hello PWA.(TEST PAGE FOR PWA)</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 40px;
+            vertical-align: middle;
+        }
+        
+        .image {
+            width: 80%;
+            margin: auto;
+            display: block;
+        }
+    </style>
 </head>
+
 <body>
-  <h1>Hello PWA.</h1>
-  <img src="./pwa-logo.svg" alt="PWA logo" class="image" />
-  <a href="p.html">p.html</a>
+    <h1>Hello PWA.</h1>
+    <img src="./pwa-logo.svg" alt="PWA logo" class="image" />
+    <a href="p.html">p.html</a>
 </body>
+
 </html>
