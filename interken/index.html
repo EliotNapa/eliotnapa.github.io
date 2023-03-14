@@ -12,203 +12,131 @@
     <!-- BootstrapのJS読み込み -->
     <script src="/js/bootstrap.min.js"></script>
     <title>インターネット研究会用トップページ</title>
+    <style type="text/css">
+        .spacer {
+            padding-top: 80px;
+            padding-bottom: 40px
+        }
+    </style>
+</head>
 
-    <body>
-        <div class="m-5">
-            <h1 class="display-4" style="line-height:1.5rem;text-align:left;height:6rem;">みやざき＠じらふのインターネット研究会用ページ</h1>
+<body>
+    <div class="m-5">
+        <h1 class="display-4" style="line-height:1.5rem;text-align:left;height:6rem;">みやざき＠じらふのインターネット研究会用ページ</h1>
 
+        <div>
             <div>
-                <div>
-                    <h3 class="display-4 mt-5" style="line-height:1.5rem;text-align:left;height:2rem;">過去の回の情報</h2>
-                </div>
-                <OL>
-                    <LI>
-                        <div>AI資料とgithub初期設定</div>
-                        <A HREF="git_index.html">
-                        github初期設定の設定はこちら</A>
-                    </LI>
-                    <LI>
-                        <div>機械学習(AI)による白黒写真のカラーリング</div>
-                        <A HREF="ai_coloring.html">
-                        白黒写真のAI着色</A>
-                    </LI>
-                </OL>
-                <h2 class="display-4 mt-5" style="line-height:1.5rem;text-align:left;height:3rem;">[2023/1/21 インターネット研究会用資料]
-                </h2>
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <div class="m-5">
-                                <div class="ps-3 mb-5">
-                                    <div class="fw-bold">
-                                        <div class="ms-4 mb-3" style="line-height:1.5rem;text-align:left;height:3rem;">
-                                            <h3>Google Colaboratoryを使ったrinna-gpt1b(日本語推論AI)の実行</h3>
-                                            <A target="_blank" HREF="https://colab.research.google.com/notebooks/welcome.ipynb?hl=ja">Google Colaboratoryとは</A>
-                                        </div>
-                                        <div class="ms-4 mb-3" style="line-height:1.5rem;text-align:left;height:4rem;">
-                                            <A target="_blank" HREF="https://prtimes.jp/main/html/rd/p/000000025.000070041.html">rinna-gpt1bとは？</A>
-                                        </div>
-                                        <div class="ms-4 mb-3" style="line-height:1.5rem;text-align:left;height:4rem;">
-                                            Google colabで開いてみる
-                                            <A target="_blank" HREF="https://colab.research.google.com/github/EliotNapa/rinna-gpt1b-on-colabo/blob/main/rinna-gpt1b.ipunb"><img src="https://colab.research.google.com/assets/colab-badge.svg"></A>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="ps-3 mb-5">
-                                    <div class="fw-bold">
-                                        <div class="ms-4 mb-3" style="line-height:1.5rem;text-align:left;height:4rem;">
-                                            <h3>Google Colaboratoryを使ったStable diffuision(画像生成AI)の実行</h3>
-                                            <A target="_blank" HREF="https://github.com/ddPn08/automatic1111-colab">CoLab-compatible version of StableDiffusionWebui by Automatic1111</A>
-                                        </div>
-                                        <div class="ms-4">
-                                            説明はWikiに書いてあります。Optional | Use Google DriveをオフにするとGoogle Driveの容量を気にせず利用できます。
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="ps-3 mb-5">
-                                    <div class="fw-bold">
-                                        <div class="ms-4 mb-3" style="line-height:1.5rem;text-align:left;height:4rem;">
-                                            <h3>AIが質問に答えるChat GPT</h3>
-                                            <A target="_blank" HREF="https://chat.openai.com">Chat GPT(アカウント作成必要）</A>
-                                        </div>
-                                        <div class="ms-4">
-                                            <A target="_blank" HREF="https://www.msn.com/ja-jp/news/money/%E3%82%B0%E3%83%BC%E3%82%B0%E3%83%AB%E5%B9%B9%E9%83%A8%E3%81%AF%E9%9D%9E%E5%B8%B8%E4%BA%8B%E6%85%8B%E3%82%92%E5%AE%A3%E8%A8%80%E3%81%97%E3%81%9F-%E3%83%8D%E3%83%83%E3%83%88%E6%A4%9C%E7%B4%A2%E3%82%92%E6%A0%B9%E6%9C%AC%E3%81%8B%E3%82%89%E5%A4%89%E3%81%88%E3%82%8B-chatgpt-%E3%81%AE%E6%81%90%E3%82%8B%E3%81%B9%E3%81%8D%E5%8F%AF%E8%83%BD%E6%80%A7/ar-AA16sLiZ">グーグル幹部は非常事態を宣言した…ネット検索を根本から変える｢ChatGPT｣の恐るべき可能性</A>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="ps-3 mb-5">
-                            (2023/02/18に向けて追記) 次の問題をChatGPTに解かせてみます。
-                            <BR/>
-                            <BR/> 限られた試験時間90分の中で、どの問題に取り組めば効率的よく最も高い点を取れるか。
-                            <BR/> 問題を解くのには、必ず所要時間がかかって部分点は存在しない。
-                            <BR/> また、取り組んだ問題は必ず解けるものとする。
-                            <BR/> 問題1 6点 所要時間12分
-                            <BR/> 問題2 11点 所要時間26分
-                            <BR/> 問題3 20点 所要時間48分
-                            <BR/> 問題4 12点 所要時間28分
-                            <BR/> 問題5 10点 所要時間25分
-                            <BR/> 問題6 19点 所要時間45分
-                            <BR/> 問題7 14点 所要時間31分
-                            <BR/> 問題7 8点 所要時間15分
-                            <BR/> 正解はこちら
-                            <A target="_blank" HREF="https://github.com/EliotNapa/mac_menu_calc/blob/main/solve_prob.py">githubのpythonコード</A>
-                        </div>
-                    </div>
-                </div>
-                <h2 class="display-4 mt-5" style="line-height:1.5rem;text-align:left;height:3rem;">[2022/12/17 インターネット研究会用資料]
-                </h2>
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <div class="m-5">
-                                <div class="ps-3 mb-5">
-                                    <div class="fw-bold">
-                                        <div class="display-6" style="line-height:1.5rem;text-align:left;height:3rem;">
-                                            最新のAI画像生成技術Stable diffuision</div>
-                                    </div>
-
-                                    <div class="ms-4" style="line-height:1.5rem;text-align:left;height:3rem;">
-                                        <A target="_blank" HREF="https://youtu.be/DDGgKt_CyRQ">【AI論文解説】物理学の知識を背景とした画像生成手法
-                                        Part1</A>
-                                    </div>
-                                    <div class="ms-4" style="line-height:1.5rem;text-align:left;height:3rem;">
-                                        <A target="_blank" HREF="https://qiita.com/omiita/items/ecf8d60466c50ae8295b?utm_source=Qiita%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9&utm_campaign=1c41e50821-Qiita_newsletter_545_12_14_2022&utm_medium=email&utm_term=0_e44feaa081-1c41e50821-33632361">世界に衝撃を与えた画像生成AI「Stable Diffusion」を徹底解説！
-                                        (Qiita記事)</A>
-                                    </div>
-                                    <div class="ms-4">
-                                        <h3>GPUのない人向きstable_diffusion.openvinoの使い方(下にGPUのある人向けの操作もあります)</h3>
-                                        <OL>
-                                            <LI class="my-3">
-                                                Python 3.8か3.9インストールする(インストールしていない場合)。
-                                                <BR /> Windows10以上の場合Microsoftストアからインストールするのがおすすめです。
-                                                <BR />
-                                                <BR />
-                                            </LI>
-                                            <LI class="my-3">
-                                                <A target="_blank" HREF="https://github.com/bes-dev/stable_diffusion.openvino">https://github.com/bes-dev/stable_diffusion.openvino<A>
-                                                    githubの上のリポジトリのREADME.mdを読んでインストール手順を実行する。
-                                                    <BR /> 具体的にはリポジトリをcloneしたあとコマンドプロンプトで次のコマンドを実行するだけ。
-                                                    <BR />
-                                                    <BR />
-                                                    <div class="fw-bold">pip install -r requirements.txt</div>
-                                                    <BR /> 実行時になにか警告が表示された場合それに従う。
-                                                    <BR />
-                                                    <BR />
-                                        </LI>
-                                        <LI class="my-3">
-                                            コマンドプロンプトで実行してみる。
-                                            <BR />
-                                            <BR />
-                                            <div class="fw-bold">python demo.py --prompt "Photo of flower"</div>
-                                            <BR /> これで数分待つとoutput.pngに花の写真が出力されるはずです。
-                                            <BR /> 標準で32stepsかかります。
-                                            <BR />
-                                            <div class="text-danger">
-                                                ※注意
-                                                Windowsではモデルをキャッシュフォルダにダウンロードするため、初回実行は管理者権限のコマンドプロンプトで実行する必要があります。一度ダウンロードした後は通常の権限のコマンドプロンプトで実行できます。
+                <h3 class="display-4 mt-5" style="line-height:1.5rem;text-align:left;height:2rem;">過去の回の情報</h2>
+            </div>
+            <OL>
+                <LI>
+                    <div>ChatGPTとAI画像生成技術Stable diffuision</div>
+                    <A HREF="chatgpt2301.html">
+            github初期設定の設定はこちら</A>
+                </LI>
+                <LI>
+                    <div>AI資料とgithub初期設定</div>
+                    <A HREF="git_index.html">
+            github初期設定の設定はこちら</A>
+                </LI>
+                <LI>
+                    <div>機械学習(AI)による白黒写真のカラーリング</div>
+                    <A HREF="ai_coloring.html">
+            白黒写真のAI着色</A>
+                </LI>
+            </OL>
+            <h2 class="display-4 mt-5" style="line-height:1.5rem;text-align:left;height:3rem;">[2023/3/18 インターネット研究会用資料]
+            </h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="m-5">
+                            <div class="ps-3 mb-5">
+                                <div class="fw-bold">
+                                    <div class="ms-4 mb-" style="line-height:1.5rem;text-align:left;height:3rem;">
+                                        <h3>AIはなぜ最近急激に進化してきたのか？</h3>
+                                        <div class="p-2 mb-4 fw-normal pe-5 fs-5 lh-base">
+                                            <h4>処理能力の向上</h4>
+                                            <div>
+                                                コンピュータの処理能力が上がり、機械学習で学習するパラメータが急激に増大し、 GPT-3で1750億パラメータと言われる膨大なデータを扱えることができ、 あるしきい値を超えたためではないかと言われています。 ちなみにGPT-2は15億パラメータでGPT-4は100兆パラメータ以上です。
                                             </div>
                                             <div>
-                                                ちなみに雑に描いた左の元画像を用意し、次のコマンドを実行すると、左の画像が出力されます。
-                                                <BR />
-                                                <div class="fw-bold">python demo.py --init-image flower.png --prompt
-                                                    "Photo of flower"</div>
-                                                <div class="container">
-                                                    <div class="row">
-                                                        <div class="col">
-                                                            <img src="img/flower.png" class="img-fluid" alt="元画像">元画像
-                                                        </div>
-                                                        <div class="col ">
-                                                            <img src="img/flower1.5.png" class="img-fluid"
-                                                                alt="出力画像">出力画像
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                <a target="_blank" href="https://japan.cnet.com/article/35201185/">「GPT-4」が間もなく登場か--テキストから動画の生成が可能に(CNET記事)</A>
                                             </div>
-                                        </LI>
-                                    </OL>
-                                </div>
-                                <div class="ms-4">
-                                    <h3>nVidia GPUのある人向き AUTOMATIC1111版stable-diffusion-webui の使い方</h3>
-                                    <OL>
-                                        <LI class="my-3">
-                                            Python 3.10をインストールする(インストールしていない場合)。
-                                            <BR /> Windows10以上の場合Microsoftストアからインストールするのがおすすめです。
-                                            <BR /> openvinoとは共存が難しいので、どちらかのみをインストールすることになります。
-                                            <BR />
-                                            <BR />
-                                        </LI>
-                                        <LI class="my-3">
-                                            <A target="_blank"
-                                                HREF="https://github.com/AUTOMATIC1111/stable-diffusion-webui">https://github.com/AUTOMATIC1111/stable-diffusion-webui<A>
-                                                    githubの上のリポジトリのREADME.mdを読んでInstallation and Runningびインストール手順を実行する。
-                                                    <BR /> 具体的にはリポジトリをcloneしたあと次の内容を実行するだけ。
-                                                    <BR />
-                                                    <BR />
-                                                    <div class="fw-bold"><A target="_blank"
-                                                            HREF="https://developer.nvidia.com/cuda-toolkit">CUDA</A>のインストール
+                                        </div>
+                                        <div class="p-4 fw-normal pe-5 fs-5 lh-base">
+                                            <h4>ChatGPTのしくみ</h4>
+                                            <a target="_blank" href="https://gigazine.net/news/20200729-how-gpt-3-work/">自然なブログを書いてしまうほど超高精度な言語モデル「GPT-3」はどのように言葉を紡いでいるのか？(Gigazine記事)</A>
+                                            <div>
+                                                <p>
+                                                    3000億もの字句を含む大規模なデータセットを用いて正解を与えずに特徴のパターンを学習させる教師なし学習を用いてデータセットから「次に来る単語」を予測するように学習が行われます。つまり、どのような語の並びで次にどのような後がくるか<span style="color:red;">確率的に</span>計算して出力しているだけなのです。</p>
+                                                <p>
+                                                    ChatGPTに質問して回答が得られるのは、質問の語句の並びの後にどのような文字列がくるのが確率的に多いか1750億パラメータの中から計算して出力しており、人間にはそれが回答に見えているということなのです。
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="p-4 fw-normal pe-5 fs-5 lh-base">
+                                            <h4>ChatGPTの処理能力に貢献した技術とScaling Law</h4>
+                                            <p>
+                                                <a target="_blank" href="https://gigazine.net/news/20170901-transformer-neural-network-language-understanding/">より高い品質の翻訳を実現するGoogleの「Transformer」がRNNやCNNをしのぐレベルに(Gigazine記事)</a>
+                                            </p>
+                                            <p>
+                                                <a target="_blank" href="https://deeplearning.hatenablog.com/entry/scaling_law">OpenAIが発見したScaling Lawの秘密</a>
+                                            </p>
+                                            <p>
+                                                Googleが開発した<span style="color:red;">Transformer</span>という仕組みを利用すると、圧倒的に性能が上がるだけではなくコンピュータの処理能力を上げれば上げるほど正解率が高くなる法則<span style="color:red;">Scaling
+                          Law</span>が発見されました。Transformer以前に使われていた言語処理モデルでは文章がある程度長くなるとボトルネックが発生し、Scaling Lawが適用できませんでした。
+                                            </p>
+                                            <p>
+                                                OpenAIではTransformerにScaling Lawが適用できることがわかったため15億円を掛けてGPT-3を開発しChatGPTの実現に繋がりました。
+                                            </p>
+                                        </div>
+                                        <div class="p-4 fw-normal pe-5 fs-5 lh-base">
+                                            <h4>教師なし学習とAIの弱点について</h4>
+                                            <p>
+                                                機械翻訳でも以前は単語の意味や文法をルールに組み込んで翻訳をさせていましたが、現状では教師なし機械学習を用いた文法などを学習しない機械翻訳のほうが性能がいいことがわかっています。
+                                            </p>
+                                            <p>
+                                                教師なし学習ということは、学習に使用した文章ごとの信頼性についての重みも考慮しないということです。
+                                            </p>
+                                            <p>
+                                                以前ChatGPTに長崎空港について質問したら、長崎市にあると回答しました。この間違いの原因を考えてみます。
+                                            </p>
+                                            <p>
+                                                我々が長崎空港の所在地を大村市と知っているのは、地図を見て知っている、ニュースなどの公式情報をにより知っている、空港公式サイトや公的機関の情報をもとに知っている、などの理由だと思います。
+                                            </p>
+                                            <p>
+                                                まずChatGPTの学習には文字情報だけが使用されるので、地図は入力されていません。文字情報として膨大な情報が学習されていますが、教師なし学習なので、他の地域の情報も長崎空港にかかわる公式サイトの情報も同じ重み付けで学習されています。
+                                            </p>
+                                            <p>
+                                                世界中の空港に関する記事を読み込んだ結果、都市の名前の冠される空港はその都市に存在する<span style="color:red;">確率</span>が最も高い、そのためにChatGPTは長崎空港は長崎市に存在すると回答したのだと思います。
+                                            </p>
+                                            <p>
+                                                また現状の仕組みでは既存の文を教師なし学習で学習していくため、確率的に最もあり得るべき回答を答えます。つまり、ChatGPTより得られる回答は確率分布の雲の最も濃いものになります。逆に考えると完全に新奇なアイディアはChatGPTより得られることはないと言えます。
+                                            </p>
+                                        </div>
+                                        <div class="p-4 fw-normal pe-5 fs-5 lh-base">
+                                            <h4>AIは<span style="color:red;">考えている</span>のか？</h4>
+                                            <p>
+                                                今まで説明したようにChatGPTは学習した文章から確率分布的にもっともあり得るべき回答を行います。
+                                            </p>
+                                            <p>
+                                                一方人間は、質問内容を自分の知識に照らして考えて、回答を行います。
+                                            </p>
+                                            <p>
+                                                これだけでは違いがよくわかりませんので、幼児が言語能力を獲得する過程を考えてみます。
+                                            </p>
+                                            <p>
+                                                言葉の分からない幼児は視覚・聴覚・味覚・触覚・嗅覚などの五感による身体的外部感覚と、特に聴覚で得た言葉を関連付けて言語能力を獲得していきます。聴覚でも大声などに寄る強調や、その他の感覚による重み付け情報などは含まれています。ここがAIとの大きな違いです。しかし、文法などのAIでいうところの教師情報はこの時点では使われていません。また、てにおはや言い間違いなどを親や周りの人間が修正することもありますが、これはGPTの繰り返しによる損失（間違い）の低減と同じであるともいえます。
+                                            </p>
+                                            <p>
+                                                つまりAIの学習と人間の学習の過程（勉強ではなく）は比較的似ているということができるのではないかと思います。ただ、AIが考えているのか、ということについての回答は人間が考えるということは一体どういうことなのか、という哲学的あるいは認知心理学的な問題を明らかにしてからでなければ回答が難しいと思います。
+                                            </p>
+                                            <P>
+                                                <div class="spacer"></div>
+                                            </P>
+                                        </div>
                                     </div>
-                                    <div class="fw-bold">学習モデルmodel.ckptを/models/Stable-Diffusionへのコピー
-                                    </div>
-                                    <div class="fw-bold">GFPGANv1.4.pthをwebui.pyと同じディレクトリへのコピー</div>
-                                    <BR />サイズが大きいためインターネット研究会当日はmodelと.pthファイルは宮崎が持参する予定です。
-                                    <BR />
-                                    <BR />
-                                    </LI>
-                                    <LI class="my-3">
-                                        コマンドプロンプトで実行してみる。
-                                        <BR />
-                                        <BR />
-                                        <div class="fw-bold">webui-user.bat</div>
-                                        <BR /> しばらく待つとコマンドプロンプトに、待受URLが表示されるので、ブラウザでそのURLを開いてみる。
-                                        <BR />設定を変更しないと
-                                        <A target="_blank" HREF="http://127.0.0.1:7861">http://127.0.0.1:7861</A>になります。
-                                        <BR />
-                                    </LI>
-                                    </OL>
                                 </div>
                             </div>
                         </div>
@@ -216,7 +144,7 @@
                 </div>
             </div>
         </div>
-        </div>
-    </body>
+    </div>
+</body>
 
 </html>
