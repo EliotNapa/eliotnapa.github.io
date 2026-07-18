@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEO OTHELLO - 人間対CPU オセロゲーム</title>
+  <meta name="description" content="スタイリッシュなデザインで3段階の強さのCPUと対戦できる、レスポンシブなオセロゲーム。">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <div class="app-container">
+    <!-- ヘッダー -->
+    <header class="glass-panel">
+      <div class="logo-section">
+        <h1><span class="logo-icon"></span>NEO OTHELLO</h1>
+        <p>人間 vs CPU 頭脳対戦</p>
+      </div>
+      <div class="header-actions">
+        <button id="soundToggleBtn" class="btn" aria-label="音声をミュート/解除">
+          <span>🔊</span> <span>サウンド: ON</span>
+        </button>
+        <button id="rulesBtn" class="btn btn-primary" aria-label="ルールとヘルプを表示">
+          ヘルプ & ルール
+        </button>
+      </div>
+    </header>
+
+    <!-- メインゲームエリア -->
+    <main class="glass-panel">
+      <!-- ターンステータス表示 -->
+      <div class="turn-status-container">
+        <div class="status-message">
+          <span id="statusPulseDot" class="pulse-dot"></span>
+          <span id="turnIndicatorText">あなたの番です (黒)</span>
+        </div>
+        <div class="status-turn-count">
+          ターン数: <span id="turnCountVal">1</span>
+        </div>
+      </div>
+
+      <!-- ボード -->
+      <div class="board-container">
+        <div id="othelloBoard" class="othello-board">
+          <!-- JSで動的に8x8のセルを生成 -->
+        </div>
+      </div>
+    </main>
+
+    <!-- コントロール & スタッツパネル -->
+    <aside class="glass-panel control-section">
+      <!-- スコアボード -->
+      <div>
+        <h2 class="panel-title">スコア</h2>
+        <div class="scoreboard">
+          <!-- プレイヤー(黒) -->
+          <div id="playerCard" class="player-score-card active-turn">
+            <div class="score-disk-preview black"></div>
+            <div class="player-name">プレイヤー (黒)</div>
+            <div id="playerScore" class="score-val">2</div>
+          </div>
+          <!-- CPU(白) -->
+          <div id="cpuCard" class="player-score-card">
+            <div class="score-disk-preview white ai-indicator"></div>
+            <div class="player-name">CPU (白)</div>
+            <div id="cpuScore" class="score-val">2</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 設定と操作 -->
+      <div>
+        <h2 class="panel-title">ゲーム設定</h2>
+        <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 0.5rem;">
+          <div class="setting-row">
+            <span class="setting-label">CPU の難易度</span>
+            <div id="difficultySelector" class="segmented-control difficulty-selector">
+              <div class="segmented-option selected" data-level="1">イージー</div>
+              <div class="segmented-option" data-level="2">ノーマル</div>
+              <div class="segmented-option" data-level="3">ハード</div>
+            </div>
+          </div>
+          
+          <div class="action-grid">
+            <button id="undoBtn" class="btn" disabled>↩ 戻る</button>
+            <button id="redoBtn" class="btn" disabled>↪ 進む</button>
+            <button id="restartBtn" class="btn btn-accent btn-full" style="grid-column: 1 / -1;">🔄 新しいゲーム</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 対戦スタッツ -->
+      <div>
+        <h2 class="panel-title">対戦成績</h2>
+        <table class="stats-table">
+          <thead>
+            <tr>
+              <th>難易度</th>
+              <th>勝ち</th>
+              <th>負け</th>
+              <th>引き分け</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="difficulty-badge badge-easy">イージー</span></td>
+              <td id="stats-easy-win">0</td>
+              <td id="stats-easy-lose">0</td>
+              <td id="stats-easy-draw">0</td>
+            </tr>
+            <tr>
+              <td><span class="difficulty-badge badge-medium">ノーマル</span></td>
+              <td id="stats-medium-win">0</td>
+              <td id="stats-medium-lose">0</td>
+              <td id="stats-medium-draw">0</td>
+            </tr>
+            <tr>
+              <td><span class="difficulty-badge badge-hard">ハード</span></td>
+              <td id="stats-hard-win">0</td>
+              <td id="stats-hard-lose">0</td>
+              <td id="stats-hard-draw">0</td>
+            </tr>
+          </tbody>
+        </table>
+        <button id="clearStatsBtn" class="btn btn-full" style="font-size: 0.75rem; padding: 0.4rem; margin-top: 0.75rem;">成績をクリア</button>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ゲームオーバーモーダル -->
+  <div id="gameOverModal" class="modal-overlay">
+    <div class="modal-content">
+      <h2 id="gameOverTitle" class="modal-title">ゲーム終了</h2>
+      <p id="gameOverSubtitle" class="modal-subtitle">CPUの対局結果</p>
+      
+      <div id="gameResultMsg" class="game-result-msg">引き分け！</div>
+      
+      <div class="game-over-stats">
+        <div class="go-stat-card">
+          <div id="goPlayerScore" class="go-stat-val black">32</div>
+          <div class="go-stat-label">プレイヤー (黒)</div>
+        </div>
+        <div class="go-stat-card">
+          <div id="goCpuScore" class="go-stat-val white">32</div>
+          <div class="go-stat-label">CPU (白)</div>
+        </div>
+      </div>
+      
+      <button id="playAgainBtn" class="btn btn-primary" style="padding: 0.8rem 2rem; font-size: 1.05rem;">もう一度プレイする</button>
+    </div>
+  </div>
+
+  <!-- ヘルプ & ルールモーダル -->
+  <div id="rulesModal" class="modal-overlay">
+    <div class="modal-content" style="max-width: 550px;">
+      <button id="closeRulesBtn" class="modal-close-btn" aria-label="閉じる">✕</button>
+      <h2 class="modal-title" style="font-size: 1.6rem; margin-bottom: 1rem;">オセロのルール & ヘルプ</h2>
+      
+      <div class="rules-body">
+        <h3>基本ルール</h3>
+        <ul>
+          <li>盤面は 8x8 マスで、黒がプレイヤー（あなた）、白がCPUです。</li>
+          <li>黒からゲームがスタートします。交互に石を置いていきます。</li>
+          <li>自分の石で相手の石を<strong>「縦・横・斜め」</strong>のいずれかの方向で挟むと、挟んだすべての相手の石が自分の色に裏返ります。</li>
+          <li>石を置くときは、<strong>必ず相手の石を1枚以上裏返せる場所</strong>に置く必要があります。</li>
+          <li>置ける場所がない場合は<strong>自動的にパス</strong>となり、相手のターンになります。</li>
+          <li>お互いに置ける場所がなくなるか、盤面がすべて埋まった時点でゲーム終了となります。最終的に石の数が多いほうが勝ちとなります。</li>
+        </ul>
+
+        <h3>CPU の難易度について</h3>
+        <ul>
+          <li><strong>イージー (Easy)</strong>: 有効な手の中からランダムに手を選びます。初心者の方向けです。</li>
+          <li><strong>ノーマル (Normal)</strong>: 角（コーナー）を優先し、逆に角の隣などの不利になりやすいマスを避けつつ、石を多く取れる手を選択します。</li>
+          <li><strong>ハード (Hard)</strong>: 先読み（探索深さ4）を行い、盤面の評価表（角の重み付けなど）、自分の石の動きやすさ（着手可能数）、確定石（裏返されない石）などを総合的に評価したMinimax法（αβ法）の思考エンジンが動作します。</li>
+        </ul>
+
+        <h3>便利機能</h3>
+        <ul>
+          <li><strong>↩ 戻る / ↪ 進む</strong>: 一手前の盤面に巻き戻したり、進めたりすることができます。（CPUの対局中以外で使用可能）</li>
+          <li><strong>サウンド機能</strong>: 石を置くときや裏返るとき、ゲーム終了時に効果音が流れます。（ヘッダーのボタンでミュート可能）</li>
+        </ul>
+      </div>
+      
+      <button id="confirmRulesBtn" class="btn btn-primary" style="margin-top: 1.5rem; width: 100%; justify-content: center;">了解しました</button>
+    </div>
+  </div>
+
+</body>
+</html>
