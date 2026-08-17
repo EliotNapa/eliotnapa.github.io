@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>装備強化データ一覧</title>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            border-left: 6px solid #2c3e50;
+            padding-left: 15px;
+            margin-bottom: 30px;
+        }
+        section {
+            margin-bottom: 40px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            font-size: 1.2rem;
+            margin-top: 0;
+            color: #2c3e50;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        p.subtitle {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: -5px;
+            margin-bottom: 15px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+        .capacity-col { width: 30%; }
+        .material-col { width: 30%; }
+        .note-col { width: 25%; }
+    </style>
+</head>
+<body>
+
+    <h1>装備</h1>
+
+    <!-- 武器ホルスター -->
+    <section>
+        <h2>武器ホルスター</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>名前</th>
+                    <th class="capacity-col">容量</th>
+                    <th class="material-col">素材</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>初期</td><td>武器x1又はサイドアーム</td><td>－</td></tr>
+                <tr><td>武器のホルスター1</td><td>武器x1, サイドアーム</td><td>チベットオオカミの皮x3</td></tr>
+                <tr><td>武器のホルスター2</td><td>武器x2, サイドアーム</td><td>マレーバクの皮2枚。</td></tr>
+                <tr><td>武器のホルスター3</td><td>武器x3, サイドアーム</td><td>ラーテルの皮x3</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- 財布 -->
+    <section>
+        <h2>財布</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>名前</th>
+                    <th class="capacity-col">容量</th>
+                    <th class="material-col">素材</th>
+                    <th class="note-col">備考</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>初期</td><td>250, 000</td><td>－</td><td></td></tr>
+                <tr><td>財布1</td><td>500, 000</td><td>バーラルの皮x2</td><td></td></tr>
+                <tr><td>財布2</td><td>1, 000, 000</td><td>アッサムマカクの皮3枚</td><td></td></tr>
+                <tr><td>財布3</td><td>2, 000, 000</td><td>アジアサイの皮x4</td><td></td></tr>
+                <tr><td>財布4</td><td>5, 000, 000</td><td>マッドデビルの皮</td><td>KE0金保管所（弓・クロスボウ）</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- バックパック -->
+    <section>
+        <h2>バックパック</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>名前</th>
+                    <th class="capacity-col">容量</th>
+                    <th class="material-col">素材</th>
+                    <th class="note-col">備考</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>初期</td><td>30</td><td>－</td><td></td></tr>
+                <tr><td>バックパック1</td><td>60</td><td>サンバーの皮x2</td><td></td></tr>
+                <tr><td>バックパック2</td><td>90</td><td>豚の皮3枚</td><td></td></tr>
+                <tr><td>バックパック3</td><td>120</td><td>デーモンフィッシュの皮x4</td><td></td></tr>
+                <tr><td>バックパック4</td><td>150</td><td>ゴーストベアの皮</td><td>KE0プラダーナ鉱山（ショットガン）</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- シリンジキット -->
+    <section>
+        <h2>シリンジキット</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>名前</th>
+                    <th class="capacity-col">容量</th>
+                    <th class="material-col">素材</th>
+                    <th class="note-col">備考</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>初期</td><td>x3</td><td>－</td><td></td></tr>
+                <tr><td>シリンジキット1</td><td>x4</td><td>イノシシの皮x2</td><td></td></tr>
+                <tr><td>シリンジキット2</td><td>x5</td><td>チベットオオカミの皮x3</td><td></td></tr>
+                <tr><td>シリンジキット3</td><td>x6</td><td>マレーバクの皮x4</td><td></td></tr>
+                <tr><td>シリンジキット4</td><td>x8</td><td>スカイタイガーの皮</td><td>バーナリー織物工場（アサルトライフル）</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- 餌バック -->
+    <section>
+        <h2>餌バック</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>名前</th>
+                    <th class="capacity-col">容量</th>
+                    <th class="material-col">素材</th>
+                    <th class="note-col">備考</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>初期</td><td>x2</td><td>－</td><td></td></tr>
+                <tr><td>餌バック1</td><td>x3</td><td>ドールの皮x2</td><td></td></tr>
+                <tr><td>餌バック2</td><td>x4</td><td>ヤクの皮x3</td><td></td></tr>
+                <tr><td>餌バック3</td><td>x5</td><td>クマの皮x5</td><td></td></tr>
+                <tr><td>餌バック4</td><td>x6</td><td>グーロの皮</td><td>プラニジャガット学校（LMG・軽機関銃）</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- 弾薬バック -->
+    <section>
+        <h2>弾薬バック</h2>
+        <p class="subtitle">(ハンドガン, SMG, ショットガン, アサルトライフル, スナイパーライフル, LMG)</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>名前</th>
+                    <th class="capacity-col">容量</th>
+                    <th class="material-col">素材</th>
+                    <th class="note-col">備考</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>初期</td><td>32, 80, 18, 90, 10, 160</td><td>－</td><td></td></tr>
+                <tr><td>弾薬バック1</td><td>48, 120, 24, 150, 15, 240</td><td>イノシシの皮x2</td><td></td></tr>
+                <tr><td>弾薬バック2</td><td>72, 160, 36, 180, 20, 320</td><td>バーラルの皮x3</td><td></td></tr>
+                <tr><td>弾薬バック3</td><td>96, 240, 48, 240, 30, 400</td><td>ウンピョウの皮x4</td><td></td></tr>
+                <tr><td>弾薬バック4</td><td>145, 300, 70, 350, 50, 500</td><td>シャドウレパードの皮</td><td>KE0木材集積場（アサルトライフル）</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- 投擲系パック -->
+    <section>
+        <h2>投擲系パック</h2>
+        <p class="subtitle">(手榴弾、火炎瓶、投げナイフ)</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>名前</th>
+                    <th class="capacity-col">容量</th>
+                    <th class="material-col">素材</th>
+                    <th class="note-col">備考</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>初期</td><td>x3</td><td>－</td><td></td></tr>
+                <tr><td>投擲系パック1</td><td>x5</td><td>ヤクの皮x2</td><td></td></tr>
+                <tr><td>投擲系パック2</td><td>x7</td><td>ドールの皮x3</td><td></td></tr>
+                <tr><td>投擲系パック3</td><td>x9</td><td>ベンガルトラの皮x5</td><td></td></tr>
+                <tr><td>投擲系パック4</td><td>x15</td><td>暗黒水龍の皮</td><td>キラ茶計量所（爆発物）</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- 爆薬バック -->
+    <section>
+        <h2>爆薬バック</h2>
+        <p class="subtitle">(C4, 地雷)</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>名前</th>
+                    <th class="capacity-col">容量</th>
+                    <th class="material-col">素材</th>
+                    <th class="note-col">備考</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>初期</td><td>x3</td><td>－</td><td></td></tr>
+                <tr><td>爆薬バック1</td><td>x4</td><td>アジアサイの皮x2</td><td></td></tr>
+                <tr><td>爆薬バック2</td><td>x5</td><td>ユキヒョウの皮x3</td><td></td></tr>
+                <tr><td>爆薬バック3</td><td>x6</td><td>サンバーの皮x5</td><td></td></tr>
+                <tr><td>爆薬バック4</td><td>x8</td><td>シックススキンの皮</td><td>ラジガド強制収容所（火炎放射器・爆発物）</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- 重火器弾薬バック -->
+    <section>
+        <h2>重火器弾薬バック</h2>
+        <p class="subtitle">(燃料タンク, フレア, ロケット, グレネードランチャー)</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>名前</th>
+                    <th class="capacity-col">容量</th>
+                    <th class="material-col">素材</th>
+                    <th class="note-col">備考</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>初期</td><td>100, 3, 3, 12</td><td>－</td><td></td></tr>
+                <tr><td>重火器弾薬バック1</td><td>200, 6, 4, 18</td><td>ベンガルトラの皮x2</td><td></td></tr>
+                <tr><td>重火器弾薬バック2</td><td>300, 9, 5, 24</td><td>クマの皮x3</td><td></td></tr>
+                <tr><td>重火器弾薬バック3</td><td>400, 12, 7, 36</td><td>ユキヒョウの皮x4</td><td></td></tr>
+                <tr><td>重火器弾薬バック4</td><td>500, 15, 10, 50</td><td>カーカダンの皮</td><td>シャナス畜産場（ショットガン）</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- 矢筒 -->
+    <section>
+        <h2>矢筒</h2>
+        <p class="subtitle">(矢, 火矢, 炸裂, ボルト)</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>名前</th>
+                    <th class="capacity-col">容量</th>
+                    <th class="material-col">素材</th>
+                    <th class="note-col">備考</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>初期</td><td>10, 3, 3, 10</td><td>－</td><td></td></tr>
+                <tr><td>矢筒1</td><td>15, 4, 4, 15</td><td>ブタの皮x1</td><td></td></tr>
+                <tr><td>矢筒2</td><td>20, 6, 6, 20</td><td>ウンピョウの皮x3</td><td></td></tr>
+                <tr><td>矢筒3</td><td>30, 8, 8, 30</td><td>ラーテルの皮x4</td><td></td></tr>
+                <tr><td>矢筒4</td><td>50, 10, 10, 50</td><td>テンジンの皮</td><td>キラ・ティー・テラス（弓・クロスボウ）</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+</body>
+</html>
